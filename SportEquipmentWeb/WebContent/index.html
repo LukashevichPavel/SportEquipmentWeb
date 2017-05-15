@@ -4,15 +4,30 @@
 
 <meta charset="UTF-8">
 <title>Login page</title>
-<link rel="stylesheet" type="text/css" href="/style.css">
+<link type="text/css" rel="stylesheet" href="index_style.css">
 </head>
 <body>
-
-	<form action="MainServlet" method="POST">
-		<input type="hidden" value="login" name="action" />
-		<input id="login" value="user" type="text" name="login" />
-		<input type="password" value="user" name="pass" />
-		<input type="submit" value="login" />
+	<form action="MainServlet" method="POST"class="login">
+		
+		<table>
+			<tr>
+				<td> <label for="login">Логин:</label> </td>
+				<td> <input id="login" value="guest@example.com" type="text" name="login" /> </td>
+			</tr>
+			<tr>
+				<td> 
+					<label for="password">Пароль:</label> 
+				</td>
+				<td> 
+					<input type="hidden" value="login" name="action" /> 
+					<input type="password" value="user" name="pass" />
+				</td>
+			</tr>
+			 <!--<p class="forgot-password"><a href="index.html">Забыл пароль?</a></p> -->
+		</table>
+			<input class="but1" type="submit" value="Login" />
+		
 	</form>
+	
 </body>
 </html>

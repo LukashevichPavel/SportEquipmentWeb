@@ -11,8 +11,8 @@ public class Skis extends Equipment {
 		super();
 	}
 
-	public Skis(int id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
-		super.setId(id);
+	public Skis(Long id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
+		super.setEquipmentId(id);
 		super.setCategory(cat);
 		super.setTitle(title);
 		super.setAvialible(isAvlble);
@@ -22,7 +22,7 @@ public class Skis extends Equipment {
 
 	public void print() {
 		String infoEquipment="";
-		infoEquipment="[id:"+getId()+"]"+getCategory()+", "+getTitle() +", ";
+		infoEquipment="[id:"+getEquipmentId()+"]"+getCategory()+", "+getTitle() +", ";
 		if (!isAvialible())	infoEquipment+="Арендовано";	
 		else  infoEquipment+="Доступно";
 		infoEquipment+=", цена аренды: "+getRentPrice()+", цена порчи/потери: "+getLostPrice();

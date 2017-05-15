@@ -8,8 +8,8 @@ public class Acsessories extends Equipment {
 		super();
 	}
 
-	public Acsessories(int id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
-		super.setId(id);
+	public Acsessories(Long id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
+		super.setEquipmentId(id);
 		super.setCategory(cat);
 		super.setTitle(title);
 		super.setAvialible(isAvlble);
@@ -19,7 +19,7 @@ public class Acsessories extends Equipment {
 
 	public void print() {
 		String infoAcsessories="";
-		infoAcsessories="[id:"+getId()+"]Аксессуар для "+getCategory()+", "+getTitle() +", ";
+		infoAcsessories="[id:"+getEquipmentId()+"]Аксессуар для "+getCategory()+", "+getTitle() +", ";
 		if (!isAvialible())	infoAcsessories+="Арендовано";	
 		else  infoAcsessories+="Не арендовано";
 		infoAcsessories+=", "+getRentPrice()+", "+getLostPrice();

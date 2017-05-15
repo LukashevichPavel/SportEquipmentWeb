@@ -1,6 +1,7 @@
 package by.htp.equipment.entity;
 
 public class User {
+	private Long userId;
 	private String login;
 	private String password;
 	private boolean role;
@@ -32,6 +33,14 @@ public class User {
 		this.password = password;
 	}
 
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
 	public boolean isRole() {
 		return role;
 	}
@@ -47,6 +56,7 @@ public class User {
 		result = prime * result + ((login == null) ? 0 : login.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + (role ? 1231 : 1237);
+		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
 
@@ -71,7 +81,18 @@ public class User {
 			return false;
 		if (role != other.role)
 			return false;
+		if (userId == null) {
+			if (other.userId != null)
+				return false;
+		} else if (!userId.equals(other.userId))
+			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
 	}
 	
 	

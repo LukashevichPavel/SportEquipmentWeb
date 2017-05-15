@@ -2,6 +2,7 @@ package by.htp.equipment.command;
 
 import static by.htp.equipment.util.ConstantValue.*;
 
+import java.sql.SQLException;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,7 +26,7 @@ public class LoginCommandAction implements CommandAction{
 	}
 
 	@Override
-	public String execute(HttpServletRequest request, HttpServletResponse response) {
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws SQLException {
 		String page = PAGE_DEFAULT;
 		
 		String login = request.getParameter(REQUEST_PARAM_LOGIN);
@@ -36,7 +37,6 @@ public class LoginCommandAction implements CommandAction{
 			user = userService.authorise(login, password);
 			
 			if(!user.isRole()){
-				
 				List<Equipment> equipment = equipService.getEquipmentBase();
 				request.setAttribute(REQUEST_PARAM_LIST_EQ, equipment);
 				page = PAGE_USER_MAIN;
@@ -52,4 +52,5 @@ public class LoginCommandAction implements CommandAction{
 		}
 		return page;
 	}
+
 }

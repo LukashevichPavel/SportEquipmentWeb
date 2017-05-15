@@ -1,6 +1,8 @@
 package by.htp.equipment.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,16 +22,29 @@ public class MainServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("do get");
-		processRequest(request, response);
+		try {
+			processRequest(request, response);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
-
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		processRequest(request, response);
+		
 		System.out.println("do post");
+		//UserDao dao = new UserDaoImpl();
+		//dao.fetchByCredentials("", "");
+		try {
+			processRequest(request, response);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 		String action = request.getParameter("action");
 		String page = null;
 		if (action != null) {

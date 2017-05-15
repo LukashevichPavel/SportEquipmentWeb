@@ -11,9 +11,9 @@ public class Bike extends Equipment {
 		super();
 	}
 
-	public Bike(int id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
+	public Bike(Long id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
 		//public Equipment(int id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
-		super.setId(id);
+		super.setEquipmentId(id);
 		super.setCategory(cat);
 		super.setTitle(title);
 		super.setAvialible(isAvlble);
@@ -23,7 +23,7 @@ public class Bike extends Equipment {
 
 	public void print() {
 		String infoEquipment="";
-		infoEquipment="[id:"+getId()+"]"+getCategory()+", "+getTitle() +", ";
+		infoEquipment="[id:"+getEquipmentId()+"]"+getCategory()+", "+getTitle() +", ";
 		if (!isAvialible())	infoEquipment+="Арендовано";	
 		else  infoEquipment+="Доступно";
 		infoEquipment+=", цена аренды: "+getRentPrice()+", цена порчи/потери: "+getLostPrice();

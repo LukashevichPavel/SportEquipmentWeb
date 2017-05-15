@@ -1,19 +1,13 @@
 package by.htp.equipment.entity;
 
-//import java.io.FileOutputStream;
-//import java.io.IOException;
-import java.text.SimpleDateFormat;
-
 public class Equipment {
-	private int id;
+	private Long equipmentId;
 	private String category;
 	private String title;
 	private boolean isAvialible;
 	private double rentPrice;
 	private double lostPrice;
-	private SimpleDateFormat date;
-	private SimpleDateFormat timeForRent;
-
+	
 	public Equipment() {
 		super();
 	}
@@ -22,42 +16,26 @@ public class Equipment {
 		this.setTitle(title);
 		this.setRentPrice(price);
 	} 
-	
-	public Equipment(int id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
-		this.setId(id);
-		this.setCategory(cat);
-		this.setTitle(title);
-		this.setAvialible(isAvlble);
-		this.setRentPrice(rentPrice);
-		this.setLostPrice(lostPrice);
-	}
-	
-	public void print(){
 		
-	};
-
-	public int getId() {
-		return id;
+	public Equipment(Long equipmentId, String category, String title, boolean isAvialible, double rentPrice,
+			double lostPrice) {
+		super();
+		this.equipmentId = equipmentId;
+		this.category = category;
+		this.title = title;
+		this.isAvialible = isAvialible;
+		this.rentPrice = rentPrice;
+		this.lostPrice = lostPrice;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void print(){}
+
+	public Long getEquipmentId() {
+		return equipmentId;
 	}
 
-	public SimpleDateFormat getDate() {
-		return date;
-	}
-
-	public void setDate(SimpleDateFormat date) {
-		this.date = date;
-	}
-
-	public SimpleDateFormat getTimeForRent() {
-		return timeForRent;
-	}
-
-	public void setTimeForRent(SimpleDateFormat timeForRent) {
-		this.timeForRent = timeForRent;
+	public void setEquipmentId(Long equipmentId) {
+		this.equipmentId = equipmentId;
 	}
 
 	public double getRentPrice() {
@@ -101,26 +79,60 @@ public class Equipment {
 	}
 
 	@Override
-	public boolean equals(Object arg0) {
-		// TODO Auto-generated method stub
-		return super.equals(arg0);
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((category == null) ? 0 : category.hashCode());
+		result = prime * result + ((equipmentId == null) ? 0 : equipmentId.hashCode());
+		result = prime * result + (isAvialible ? 1231 : 1237);
+		long temp;
+		temp = Double.doubleToLongBits(lostPrice);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(rentPrice);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		return result;
 	}
 
 	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
-		return super.hashCode();
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Equipment other = (Equipment) obj;
+		if (category == null) {
+			if (other.category != null)
+				return false;
+		} else if (!category.equals(other.category))
+			return false;
+		if (equipmentId == null) {
+			if (other.equipmentId != null)
+				return false;
+		} else if (!equipmentId.equals(other.equipmentId))
+			return false;
+		if (isAvialible != other.isAvialible)
+			return false;
+		if (Double.doubleToLongBits(lostPrice) != Double.doubleToLongBits(other.lostPrice))
+			return false;
+		if (Double.doubleToLongBits(rentPrice) != Double.doubleToLongBits(other.rentPrice))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "id=" + id + "[category=" + category + ", title=" + title + ", isAvialible=" + isAvialible
-				+ ", rentPrice=" + rentPrice + ", lostPrice=" + lostPrice+"]"; //+ ", date=" + date + ", timeForRent="
-				//+ timeForRent + "]";
+		return "Equipment [equipmentId=" + equipmentId + ", category=" + category + ", title=" + title
+				+ ", isAvialible=" + isAvialible + ", rentPrice=" + rentPrice + ", lostPrice=" + lostPrice + "]";
 	}
 
-	public int compareTo(String arg0) {
-		return category.compareTo(arg0);
-	}
+	
 
 }

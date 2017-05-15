@@ -10,8 +10,8 @@ public class SnowBoard extends Equipment {
 		super();
 	}
 
-	public SnowBoard(int id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
-		super.setId(id);
+	public SnowBoard(Long id, String cat, String title, boolean isAvlble, double rentPrice, double lostPrice) {
+		super.setEquipmentId(id);
 		super.setCategory(cat);
 		super.setTitle(title);
 		super.setAvialible(isAvlble);
@@ -21,7 +21,7 @@ public class SnowBoard extends Equipment {
 
 	public void print() {
 		String infoEquipment="";
-		infoEquipment="[id:"+getId()+"]"+getCategory()+", "+getTitle() +", ";
+		infoEquipment="[id:"+getEquipmentId()+"]"+getCategory()+", "+getTitle() +", ";
 		if (!isAvialible())	infoEquipment+="Арендовано";	
 		else  infoEquipment+="Доступно";
 		infoEquipment+=", цена аренды: "+getRentPrice()+", цена порчи/потери: "+getLostPrice();
