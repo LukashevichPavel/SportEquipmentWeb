@@ -8,6 +8,7 @@ public class Client {
 	private String firstname;
 	private String lastname;
 	private String passport;
+	private String email;
 	private String adress;
 	private String telNumber;
 	private Map<Integer, Equipment> takeEquipment;
@@ -112,6 +113,14 @@ public class Client {
 
 	public void setTelNumber(String telNumber) {
 		this.telNumber = telNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override

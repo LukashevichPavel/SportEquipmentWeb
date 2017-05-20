@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Register page</title>
+<link type="text/css" rel="stylesheet" href="register_page_style.css">
+</head>
+<body>
+<h1>
+	Регистрация нового клиента :
+</h1>
+<table>
+	<tr>
+		<td><label for="login">*Придумайте логин:</label></td>
+		<td> <input id="login" type="text" name="login" /> </td>
+	</tr>
+	<tr>
+		<td><label for="password">*Пароль:</label></td>
+		<td><input type="password" name="pass" /></td>
+	</tr>
+	<tr>
+		<td><label for="password2">*Повторите пароль:</label></td>
+		<td><input type="password" name="pass2" /></td>
+	</tr>
+	<tr>
+		<td><label for="email">*Адресс электронной почты:</label> </td>
+		<td><input type="text" name="email" /> </td>
+	</tr>
+	<tr>
+		<td><label for="firstname">*Фамилия:</label> </td>
+		<td><input type="text" name="firstname" /> </td>
+	</tr>
+	<tr>
+		<td><label for="lastname">*Имя:</label> </td>
+		<td><input type="text" name="lastname" /></td>
+	</tr>
+	<tr>
+		<td><label for="adress">Адрес:</label> </td>
+		<td><input type="text" name="adress" /></td>
+	</tr>
+	<tr>
+		<td> <label for="telnumber">*Номер мобильного телефона:</label> </td>
+		<td> <input type="text" value="+375 (___) _____-____-____"name="telnumber" /> </td>
+	</tr>
+	<tr>
+		<td>
+					
+		</td>
+		<td>
+			<form action="MainServlet" method="POST" class="create_user">
+				<input type="hidden" value="create_user" name="action" /> 
+				<input class="but1" type="submit" value="Register" />
+			</form>
+		</td>	
+	</tr>
+</table>
+<p>Поля отмеченные * обязательны для заполнения</p>
+	
+	
+</body>
+</html>

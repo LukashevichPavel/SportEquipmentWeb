@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>User page</title>
-<link type="text/css" rel="stylesheet" href="user_style.css">
+<link type="text/css" rel="stylesheet" href="user_page_style.css">
 </head>
 <body>
 	<div class="header">
@@ -41,7 +41,8 @@
 				</tr>
 				<c:forEach items="${list_eq}" var="i">
 				<tr> 
-					<td><c:out value="${list_eq.indexOf(i)}"/></td>
+					<!--  <td><c:out value="${list_eq.indexOf(i)}"/></td>-->
+					<td><c:out value="${i.getEquipmentId()}" /></td>
 					<td><c:out value="${i.getCategory()}" /></td>
 					<td><c:out value="${i.getTitle()}" /></td>
 					<td><c:out value="${i.isAvialible()}" /></td>

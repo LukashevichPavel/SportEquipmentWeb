@@ -5,6 +5,7 @@ public class User {
 	private String login;
 	private String password;
 	private boolean role;
+	private Client client; 
 	
 	public User() {
 		super();
@@ -15,6 +16,15 @@ public class User {
 		this.login = login;
 		this.password = password;
 		this.role = role;
+	}
+
+	public User(Long userId, String login, String password, boolean role, Client client) {
+		super();
+		this.userId = userId;
+		this.login = login;
+		this.password = password;
+		this.role = role;
+		this.client = client;
 	}
 
 	public String getLogin() {
@@ -47,6 +57,14 @@ public class User {
 
 	public void setRole(boolean role) {
 		this.role = role;
+	}
+
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
 	@Override

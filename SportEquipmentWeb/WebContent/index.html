@@ -4,11 +4,10 @@
 
 <meta charset="UTF-8">
 <title>Login page</title>
-<link type="text/css" rel="stylesheet" href="index_style.css">
+<link type="text/css" rel="stylesheet" href="index_page_style.css">
 </head>
 <body>
-	<form action="MainServlet" method="POST"class="login">
-		
+	<form action="MainServlet" method="POST" class="login">
 		<table>
 			<tr>
 				<td> <label for="login">Логин:</label> </td>
@@ -20,13 +19,16 @@
 				</td>
 				<td> 
 					<input type="hidden" value="login" name="action" /> 
-					<input type="password" value="user" name="pass" />
+					<input type="password" value="guest" name="pass" />
 				</td>
 			</tr>
 			 <!--<p class="forgot-password"><a href="index.html">Забыл пароль?</a></p> -->
 		</table>
 			<input class="but1" type="submit" value="Login" />
-		
+	</form>
+	<form action="MainServlet" method="POST" class="register">
+	<input type="hidden" value="register" name="action" /> 
+	<input class="but1" type="submit" value="Register" />
 	</form>
 	
 </body>

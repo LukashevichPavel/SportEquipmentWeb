@@ -1,0 +1,71 @@
+body {
+ background: url(background_title.jpg);
+ color:blue;
+ border:1px;
+ padding-left:30px;
+}
+h1{
+padding-top:60px;
+text-shadow: -1px -1px 1px black;
+}
+table {
+width:60%;
+border-style: double;
+border-color:blue;
+border-radius: 15px;
+padding:0px;
+margin-bottom:3px;
+ background: rgba(255, 255, 255, 0.06);
+}
+td{
+/*border:1px solid black;*/
+padding: 0px;
+}
+label {
+  float: left;
+  width: 250px;
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  text-align: left;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px black;
+}
+
+input[type=text], input[type=password] {
+  padding: 0 10px;
+  width: 180px;
+  height: 40px;
+  color: black;
+ text-shadow: 1px 1px 1px blue;
+  border: solid black 1px;
+  border-radius: 5px;
+text-align:center;
+}
+input[type=text]:focus, input[type=password]:focus {
+  color: black;
+  background: rgba(0, 0, 0, 0.16);
+
+}
+
+.but1{
+ background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+   background: -webkit-gradient(linear, 0 0, 0  100%, from(#000000), to(#000000), color-stop(0.5, blue));
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+   color: white;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius:  15px;
+   border: 1px solid blue;
+   height:50px;
+   width:200px;
+   text-align:center;
+   text-shadow: 1px 1px 1px black;
+}
+p{
+	background: rgba(0, 0, 255, 0.3);
+	color:white;
+	text-shadow: 1px 1px 1px black;
+	text-align:center;
+}

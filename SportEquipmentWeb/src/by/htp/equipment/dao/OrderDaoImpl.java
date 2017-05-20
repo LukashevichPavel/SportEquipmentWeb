@@ -43,6 +43,12 @@ public class OrderDaoImpl implements OrderDao{
 			
 			ps.executeUpdate();
 			System.out.println("Insert succesfull");
+			
+			//***********************************************************
+			ps=conn.prepareStatement(SQL_STATEMENT_EQUIPMENT_AVIALIBLE);
+			ps.setLong(1, order.getEquipment().getEquipmentId());
+			ps.executeUpdate();
+			//***********************************************************
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -24,7 +24,7 @@ public class OrderCreateAction implements CommandAction{
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		
 		//String page = PAGE_ORDER_ALL;
-		String page = PAGE_DEFAULT;
+		String page = PAGE_USER_MAIN;
 		String userId = request.getParameter(PARAM_USER_ID);
 		String equipmentId = request.getParameter(PARAM_EQUIPMENT_ID);
 		String dateStart = request.getParameter(PARAM_DATE_START);
