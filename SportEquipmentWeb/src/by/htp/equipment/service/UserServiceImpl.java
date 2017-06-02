@@ -2,7 +2,6 @@ package by.htp.equipment.service;
 
 import by.htp.equipment.dao.UserDao;
 import by.htp.equipment.dao.UserDaoImpl;
-import by.htp.equipment.entity.Client;
 import by.htp.equipment.entity.User;
 
 public class UserServiceImpl implements UserService {
@@ -33,16 +32,15 @@ public UserServiceImpl(){
 		return false;
 	}
 	@Override
-	public User createUser(Long userId, String login, String password, boolean role, Client client) {
-		User user = new User();
-		user.setUserId(userId);
-		user.setLogin(login);
-		user.setPassword(password);
-		user.setRole(role);
-		user.setClient(client);
-		dao.createUser(user, client);
+	public void createUser(User user) {
+		
+		dao.createUser(user);
 		// TODO Auto-generated method stub
-		return user;
+	}
+	@Override
+	public User findUserWithId(Long userId) {
+	//	dao
+		return null;
 	}
 
 }

@@ -1,0 +1,83 @@
+body {
+ background: url(background_user.jpg) 100% 100% no-repeat;
+ background-position:center;
+ background-attachment: fixed;
+ background-color: grey;
+ background-size: cover;
+ padding:15px;
+
+ 
+}
+h1,h4,p{
+padding:0px;
+margin:0px;
+font:bold sans-serif;
+text-shadow: 1px 1px 1px blue;
+/*font: bold italic 110% serif;*/
+}
+h4{
+padding-left:75px;
+}
+h2 {
+padding:0px;
+color:red;
+text-align:center;
+text-shadow: 1px 1px 1px black;
+}
+
+.header{
+ 
+ /*text-align:center;*/
+}
+.leftcolumn{
+  
+}
+.centrcolumn{
+}
+.rightcolumn{
+
+}
+.makeorder{
+   background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+   background: -webkit-gradient(linear, 0 0, 0  100%, from(#000000), to(#000000), color-stop(0.5, red));
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+   padding: 3px 7px;
+   color: white;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius:  15px;
+   border: 1px solid blue;
+   height:50px;
+   width:200px;
+   margin:auto;
+   text-align:center;
+   text-shadow: 1px 1px 1px black;
+ /*  background: rgba(0, 0, 0, 0.16);*/
+}
+.equiptable {
+
+text-align:center;
+border: solid 1px blue;
+border-radius: 15px;
+padding:5px;
+margin: auto;
+}
+
+.headertable {
+
+text-align:left;
+border-radius: 15px;
+padding:5px;
+margin: auto;
+}
+.autoriseduser{
+text-align:left;
+color:white;
+text-shadow: 1px 1px 1px black;
+}
+input[type=text] .formorder{
+	padding:0px;
+	
+	text-align:center;
+	margin: 0px;
+}

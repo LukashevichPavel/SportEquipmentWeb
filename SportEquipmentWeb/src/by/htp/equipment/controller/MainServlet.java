@@ -50,6 +50,8 @@ public class MainServlet extends HttpServlet {
 		if (action != null) {
 			CommandAction currentAction = CommandChooser.chooseAction(action);
 			page = currentAction.execute(request, response);
+			//response.setCharacterEncoding("cp1251");
+		//	response.setContentType("text/html;charset=cp1251");
 			
 			RequestDispatcher disp =request.getRequestDispatcher(page);
 	        disp.forward(request, response);

@@ -6,7 +6,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Error page</title>
-		<link rel="stylesheet" type="text/css" href="style_error_page.css">
+		<link rel="stylesheet" type="text/css" href="error.css">
 	</head>
 	<body>
 		<c:out value="${error_msg}"/>

@@ -9,6 +9,10 @@ public class CommandChooser {
 			System.out.println("Login action: ");
 			return new LoginCommandAction();
 			}
+		case ACTION_LOGOUT:{
+			System.out.println("Logout action: ");
+			return new LogoutCommandAction();
+			}
 		case ACTION_MAKE_ORDER:{
 			System.out.println("Create order action ");
 			return new OrderCreateAction();
@@ -19,11 +23,11 @@ public class CommandChooser {
 			}
 		case ACTION_REGISTER:{
 			System.out.println("Register page ");
-			//return new ShowRegisterPage(); 
+			return new ShowRegisterPage(); 
 			}
 		case ACTION_CREATE_USER:{
 			System.out.println("Create user action ");
-			return new RegisterCommandAction();
+			return new UserCreateAction();
 		}
 		}
 		///STUB!!!!
